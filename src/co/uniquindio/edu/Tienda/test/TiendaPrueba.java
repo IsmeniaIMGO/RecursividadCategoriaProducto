@@ -10,12 +10,8 @@ public class TiendaPrueba {
 		//crear lista vacia para punto1 precio
 		ArrayList<Producto> listaProductoPrecio = new ArrayList<Producto>();
 		
-		//crear lista vacia para punto2 precio
+		//crear lista vacia para punto2 color
 		ArrayList<Producto> listaProductosColor = new ArrayList<Producto>();
-		
-		
-		//crear lista vacia para punto1 precio
-		//ArrayList<Producto> listaProductoColor = new ArrayList<Producto>();
 		
 		//crear listaCategorias para la tienda
 		ArrayList<Categoria> listaCategorias = new ArrayList<Categoria>();
@@ -23,7 +19,7 @@ public class TiendaPrueba {
 		//crear la tienda
 		Tienda tienda = new Tienda("tienda1", listaCategorias);
 		
-		//crear listaProductos y ListaSubCategorias para Categoria
+		//crear listaProductos y ListaSubCategorias para Categoria: Tecnologia
 		ArrayList<Producto> listaProductos1 = new ArrayList<Producto>();
 		ArrayList<Categoria> subCategoria1 = new ArrayList<Categoria>();
 		
