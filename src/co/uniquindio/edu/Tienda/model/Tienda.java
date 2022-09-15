@@ -2,7 +2,6 @@ package co.uniquindio.edu.Tienda.model;
 
 import java.util.ArrayList;
 
-import co.uniquindio.edu.Tienda.model.*;
 public class Tienda {
 	private String nombre;
 	private ArrayList<Categoria> listaCategorias;
