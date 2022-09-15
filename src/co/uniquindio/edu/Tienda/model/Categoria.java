@@ -24,6 +24,13 @@ public class Categoria {
 		this.subCategoria = subCategoria;
 	}
 
+	public Categoria(String nombre, ArrayList<Producto> listaProductos) {
+		super();
+		this.nombre = nombre;
+		this.listaProductos = listaProductos;
+	}
+
+	
 	/**
 	 * Metodos set y get
 	 * @return
@@ -66,24 +73,29 @@ public class Categoria {
 	 * @param i
 	 * @param listaProductosPrecio
 	 */
-	public ArrayList<Producto> buscarPrecio(int i, ArrayList<Producto> listaProductosPrecio) {
+	public ArrayList<Producto> buscarPrecio2(int i, ArrayList<Producto> listaProductosPrecio) {
 		//caso base
-		
 		if (i == listaProductos.size()) {
 			return listaProductosPrecio;
 		//caso recursivo
 		}else{
-			listaProductos.get(i).buscarPrecio(i+1, listaProductosPrecio);	
+			listaProductos.get(i).buscarPrecio3(i, listaProductosPrecio);	
+		}
+		
+		if (this.getSubCategoria() != null) {
 			//caso base
 			if (i == subCategoria.size()) {
 				return listaProductosPrecio;
 			//caso recursivo
 			}else{			
-				subCategoria.get(i).buscarPrecio(i, listaProductosPrecio);
-				buscarPrecio(i+1, listaProductosPrecio);	
+				subCategoria.get(i).buscarPrecio2(i, listaProductosPrecio);
 			}	
-			return listaProductosPrecio;
 		}
+		
+		
+		buscarPrecio2(i+1, listaProductosPrecio);	
+		return listaProductosPrecio;
+		
 	}
 	
 
@@ -102,15 +114,20 @@ public class Categoria {
 		}else{
 			listaProductos.get(i).buscarColor(i+1, listaProductosColor);	
 			//caso base
+		}
+		if (this.getSubCategoria() != null) {
+			//caso base
 			if (i == subCategoria.size()) {
 				return listaProductosColor;
 			//caso recursivo
 			}else{			
 				subCategoria.get(i).verificarColor(i, listaProductosColor);
-				verificarColor(i+1, listaProductosColor);	
 			}	
-			return listaProductosColor;
-		}	
+		}
+		
+		
+		buscarPrecio2(i+1, listaProductosColor);	
+		return listaProductosColor;	
 	}
 
 	

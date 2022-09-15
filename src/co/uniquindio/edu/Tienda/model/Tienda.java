@@ -56,7 +56,8 @@ public class Tienda {
 		}
 		//caso recursivo
 		else {	
-			listaCategorias.get(i).buscarPrecio(i,listaProductosPrecio);	
+			listaCategorias.get(i).buscarPrecio2(i,listaProductosPrecio);	
+			
 			buscarPrecio(i+1, listaProductosPrecio);	
 			
 		}		

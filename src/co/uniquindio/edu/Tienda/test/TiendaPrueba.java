@@ -12,19 +12,21 @@ public class TiendaPrueba {
 		
 		//crear lista vacia para punto2 color
 		ArrayList<Producto> listaProductosColor = new ArrayList<Producto>();
-		
+		//_________________________________________________________________________________________________________________________
 		//crear listaCategorias para la tienda
 		ArrayList<Categoria> listaCategorias = new ArrayList<Categoria>();
 		
 		//crear la tienda
 		Tienda tienda = new Tienda("tienda1", listaCategorias);
-		
+		//_____________________________________________________________________________________________________________________
 		//crear listaProductos y ListaSubCategorias para Categoria: Tecnologia
 		ArrayList<Producto> listaProductos1 = new ArrayList<Producto>();
 		ArrayList<Categoria> subCategoria1 = new ArrayList<Categoria>();
 		
 		//crear categoria para listaCategorias en Tienda
 		Categoria tecnologia = new Categoria("Tecnologia", listaProductos1, subCategoria1);
+		
+		//____________________________________________________________________________________________________________
 		
 		//crear producto para listaProductos1 en Categoria: Tecnologia
 		Producto televisor = new Producto("Televisor", 12000 , "negro");
@@ -43,10 +45,9 @@ public class TiendaPrueba {
 		
 		//crear listaProductos3 y subCategoria3 para Categoria: Camaras de listaSubcategoria2 
 		ArrayList<Producto> listaProductos3 = new ArrayList<Producto>();
-		ArrayList<Categoria> subCategoria3 = new ArrayList<Categoria>();
 		
 		//crear categoria para listaSubcategoria2 en categoria: computadores
-		Categoria camaras = new Categoria("Camaras", listaProductos3, subCategoria3);
+		Categoria camaras = new Categoria("Camaras", listaProductos3);
 		
 		//crear producto para listaPorductos3 en categoria: camaras
 		Producto camara1 = new Producto("Camara reflexiva", 11100, "rojo");

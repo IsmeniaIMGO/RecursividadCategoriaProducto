@@ -60,7 +60,7 @@ public class Producto {
 	 * @param i
 	 * @param listaProductosPrecio
 	 */
-	public void buscarPrecio(int i, ArrayList<Producto> listaProductosPrecio) {
+	public void buscarPrecio3(int i, ArrayList<Producto> listaProductosPrecio) {
 		double valor = 10000;
 		if (precio > valor) {
 			listaProductosPrecio.add(this);
